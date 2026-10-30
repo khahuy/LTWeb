@@ -375,7 +375,7 @@ button {
 
 .dashboard-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.7fr);
+  grid-template-columns: minmax(0, 1fr);
   gap: 20px;
   align-items: start;
 }
@@ -553,6 +553,15 @@ tbody tr:hover {
   white-space: nowrap;
   text-align: right;
   font-variant-numeric: tabular-nums;
+}
+
+.price-input {
+  min-width: 130px;
+  max-width: 190px;
+}
+
+select option:disabled {
+  color: #98a2b3;
 }
 
 .form-grid {
