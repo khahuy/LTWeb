@@ -361,6 +361,7 @@ h3 {
 .trust-icon {
   display: grid;
   flex: 0 0 42px;
+  width: 42px;
   height: 42px;
   place-items: center;
   color: var(--blue-dark);
@@ -370,11 +371,11 @@ h3 {
 }
 
 .trust-item strong,
-.trust-item span {
+.trust-item div span {
   display: block;
 }
 
-.trust-item span {
+.trust-item div span {
   color: var(--muted);
   font-size: 0.86rem;
 }
