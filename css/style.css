@@ -1274,3 +1274,28 @@ tbody tr:last-child td {
     padding: 24px;
   }
 }
+
+/* Static order detail documents. */
+.order-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  align-items: stretch;
+}
+.order-detail h2 { font-size: 1.25rem; }
+.order-detail-grid > .panel { margin-top: 0; }
+.order-info { margin: 0; }
+.order-info > div + div { margin-top: 14px; }
+.order-info dt { margin-bottom: 4px; color: var(--muted); font-size: 0.85rem; }
+.order-info dd { margin: 0; overflow-wrap: anywhere; }
+.order-items { margin-top: 22px; }
+.order-items table { min-width: 620px; }
+.order-totals { max-width: 380px; margin: 20px 0 0 auto; }
+.order-totals > div { display: flex; justify-content: space-between; gap: 20px; padding: 9px 0; }
+.order-totals dd { margin: 0; white-space: nowrap; }
+.order-grand-total { border-top: 1px solid var(--line); color: var(--navy); font-weight: 800; }
+.order-detail-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+@media (max-width: 720px) {
+  .order-detail-grid { grid-template-columns: 1fr; }
+  .order-detail-grid > .panel { margin-top: 0; }
+}
