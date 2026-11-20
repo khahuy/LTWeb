@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Góc Bàn Học - website bán văn phòng phẩm và phụ kiện bàn học.">
+  <title>Đơn DH001 · Admin | Góc Bàn Học</title>
+  <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body><div class="admin-shell"><aside class="admin-sidebar"><a class="admin-brand" href="dashboard.html"><span class="admin-brand-mark">GBH</span><span>Góc Bàn Học<small>Khu vực quản trị</small></span></a><nav class="admin-nav" aria-label="Điều hướng Admin"><a class="" href="dashboard.html"><span class="admin-nav-icon">DB</span>Tổng quan</a><a class="" href="users.html"><span class="admin-nav-icon">KH</span>Khách hàng</a><a class="" href="categories.html"><span class="admin-nav-icon">DM</span>Loại sản phẩm</a><a class="" href="products.html"><span class="admin-nav-icon">SP</span>Sản phẩm</a><a class="" href="prices.html"><span class="admin-nav-icon">GB</span>Giá bán</a><a class="is-active" href="orders.html"><span class="admin-nav-icon">ĐH</span>Đơn hàng</a></nav><div class="admin-sidebar-footer"><a href="../index.html">Xem website khách hàng</a><button type="button" data-admin-logout>Đăng xuất Admin</button></div></aside><div class="admin-main"><header class="admin-topbar"><h1>Chi tiết đơn hàng</h1><div class="admin-user"><span>Admin User</span><span class="admin-avatar">AD</span></div></header><main class="admin-content"><div class="page-heading"><div><h2>Chi tiết đơn DH001</h2><p>Thông tin đơn hàng, người nhận và các sản phẩm đã đặt.</p></div></div><div class="order-detail">
+  <div class="order-detail-grid">
+    <section class="panel" aria-labelledby="order-info-title">
+      <h2 id="order-info-title">Thông tin đơn hàng</h2>
+      <dl class="order-info">
+        <div><dt>Mã đơn hàng</dt><dd><strong>DH001</strong></dd></div>
+        <div><dt>Ngày đặt</dt><dd>11/09/2026</dd></div>
+        <div><dt>Trạng thái đơn</dt><dd><span class="status status-warning">Chưa xác nhận</span></dd></div>
+        <div><dt>Phương thức thanh toán</dt><dd>COD</dd></div>
+      </dl>
+    </section>
+    <section class="panel" aria-labelledby="recipient-title">
+      <h2 id="recipient-title">Thông tin người nhận</h2>
+      <dl class="order-info">
+        <div><dt>Họ tên</dt><dd>Nguyễn Văn A</dd></div>
+        <div><dt>Số điện thoại</dt><dd>0901234567</dd></div>
+        <div><dt>Địa chỉ giao hàng</dt><dd>123 Lê Văn Việt, TP. Thủ Đức, TP.HCM</dd></div>
+      </dl>
+    </section>
+  </div>
+  <section class="panel order-items" aria-labelledby="order-items-title">
+    <h2 id="order-items-title">Sản phẩm trong đơn</h2>
+    <div class="table-wrap"><table><thead><tr><th>Sản phẩm</th><th>Mã sản phẩm</th><th>Đơn giá</th><th>Số lượng</th><th class="text-right">Thành tiền</th></tr></thead>
+    <tbody><tr><td>Sổ lò xo Campus B5</td><td>SP001</td><td>42.000đ</td><td>1</td><td class="text-right">42.000đ</td></tr><tr><td>Bút gel Thiên Long 0.5 mm</td><td>SP004</td><td>12.000đ</td><td>2</td><td class="text-right">24.000đ</td></tr><tr><td>Bộ kẹp giấy màu</td><td>SP018</td><td>19.000đ</td><td>1</td><td class="text-right">19.000đ</td></tr></tbody></table></div>
+    <dl class="order-totals"><div><dt>Tiền sản phẩm</dt><dd>85.000đ</dd></div><div><dt>Phí giao hàng</dt><dd>15.000đ</dd></div><div class="order-grand-total"><dt>Tổng thanh toán</dt><dd>100.000đ</dd></div></dl>
+  </section>
+  <div class="order-detail-actions"><a class="button button-primary" href="orders.html">← Quay lại danh sách đơn hàng</a><a class="button" href="dashboard.html#customer-statistics">Về thống kê khách hàng</a></div>
+</div></main></div></div><script src="../js/admin.js"></script></body></html>
