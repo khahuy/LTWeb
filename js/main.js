@@ -9,6 +9,71 @@
     });
   });
 
+  var addressRadios = document.querySelectorAll('input[name="address"]');
+  var newAddressFields = document.getElementById("new-address-fields");
+  if (addressRadios.length && newAddressFields) {
+    var toggleNewAddress = function () {
+      var selected = document.querySelector('input[name="address"]:checked');
+      newAddressFields.classList.toggle("is-hidden", !selected || selected.value !== "new");
+    };
+    addressRadios.forEach(function (radio) {
+      radio.addEventListener("change", toggleNewAddress);
+    });
+    toggleNewAddress();
+  }
+
+  var categoryNav = document.getElementById("category-nav");
+  var productNav = document.querySelector('.main-nav a[href="products.html#loai-san-pham"]');
+
+  if (productNav && !categoryNav) {
+    var siteHeader = document.querySelector(".site-header");
+    if (siteHeader) {
+      var categoryItems = [
+        ["Tất cả", "tat-ca"],
+        ["Sổ &amp; Giấy", "so-giay"],
+        ["Bút viết", "but-viet"],
+        ["Dụng cụ học tập", "dung-cu-hoc-tap"],
+        ["Dụng cụ văn phòng", "dung-cu-van-phong"],
+        ["Mỹ thuật", "my-thuat"],
+        ["Phụ kiện bàn học", "phu-kien-ban-hoc"]
+      ];
+      categoryNav = document.createElement("div");
+      categoryNav.className = "category-nav is-hidden";
+      categoryNav.id = "category-nav";
+      categoryNav.innerHTML = '<div class="container"><nav class="category-tabs" aria-label="Loại sản phẩm">' +
+        categoryItems.map(function (item, index) {
+          return '<a class="' + (index === 0 ? "is-active" : "") + '" href="products.html#' + item[1] + '"' +
+            (index === 0 ? ' aria-current="page"' : "") + ">" + item[0] + "</a>";
+        }).join("") + "</nav></div>";
+      siteHeader.insertAdjacentElement("afterend", categoryNav);
+    }
+  }
+
+  if (categoryNav && productNav) {
+    var hideCategoriesTimer = 0;
+    var openCategories = function () {
+      window.clearTimeout(hideCategoriesTimer);
+      categoryNav.classList.remove("is-hidden");
+    };
+    var closeCategories = function () {
+      hideCategoriesTimer = window.setTimeout(function () {
+        categoryNav.classList.add("is-hidden");
+      }, 150);
+    };
+    productNav.addEventListener("mouseenter", openCategories);
+    productNav.addEventListener("focus", openCategories);
+    productNav.addEventListener("mouseleave", closeCategories);
+    productNav.addEventListener("blur", closeCategories);
+    categoryNav.addEventListener("mouseenter", openCategories);
+    categoryNav.addEventListener("mouseleave", closeCategories);
+    categoryNav.addEventListener("focusin", openCategories);
+    categoryNav.addEventListener("focusout", function (event) {
+      if (!categoryNav.contains(event.relatedTarget)) {
+        closeCategories();
+      }
+    });
+  }
+
   document.querySelectorAll("[data-demo-message]").forEach(function (button) {
     button.addEventListener("click", function () {
       alert(button.dataset.demoMessage);

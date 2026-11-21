@@ -20,7 +20,7 @@
   </a>
     <nav class="main-nav" aria-label="Điều hướng chính">
       <a class="" href="home-logged-in.html">Trang chủ</a>
-      <a class="is-active" href="products.html">Sản phẩm</a>
+      <a class="is-active" href="products.html#loai-san-pham">Sản phẩm</a>
       <a class="" href="search.html">Tìm kiếm</a>
       <a class="" href="order-history.html">Đơn hàng</a>
     </nav>
@@ -29,13 +29,14 @@
        <button class="button button-small" type="button" data-logout>Đăng xuất</button></div>
   </div>
 </header>
+<div class="category-nav is-hidden" id="category-nav"><div class="container"><nav class="category-tabs" id="category-tabs" aria-label="Loại sản phẩm"><a class="is-active" href="products.html#tat-ca" aria-current="page" data-subtitle="Tất cả sản phẩm trong cửa hàng.">Tất cả</a><a href="products.html#so-giay" data-subtitle="Sổ tay, giấy ghi chú và sản phẩm giấy cho học tập.">Sổ &amp; Giấy</a><a href="products.html#but-viet" data-subtitle="Bút bi, bút gel và bút đánh dấu dùng hằng ngày.">Bút viết</a><a href="products.html#dung-cu-hoc-tap" data-subtitle="Thước, compa, gôm và dụng cụ dành cho học sinh.">Dụng cụ học tập</a><a href="products.html#dung-cu-van-phong" data-subtitle="Bấm kim, kéo, băng keo và vật dụng văn phòng.">Dụng cụ văn phòng</a><a href="products.html#my-thuat" data-subtitle="Màu vẽ, bút chì màu và giấy vẽ sáng tạo.">Mỹ thuật</a><a href="products.html#phu-kien-ban-hoc" data-subtitle="Hộp bút, khay để bàn và phụ kiện sắp xếp.">Phụ kiện bàn học</a></nav><p class="category-subtitle is-hidden" id="category-subtitle" aria-live="polite"></p></div></div>
 <main id="main-content"><section class="page-hero"><div class="container">
   <div class="breadcrumbs"><a href="home-logged-in.html">Trang chủ</a><span>/</span><span>Sản phẩm</span></div>
   <h1>Sản phẩm</h1><p>Khám phá văn phòng phẩm và phụ kiện dành cho góc học tập của bạn.</p>
 </div></section>
-<section class="section"><div class="container content-layout">
+<section class="section"><div class="container"><div class="content-layout">
   <aside class="filter-panel"><h3>Lọc sản phẩm</h3>
-    <div class="filter-group"><strong class="field-label">Danh mục</strong><label><input type="checkbox" checked> Sổ &amp; Giấy</label><label><input type="checkbox"> Bút viết</label><label><input type="checkbox"> Dụng cụ học tập</label><label><input type="checkbox"> Dụng cụ văn phòng</label><label><input type="checkbox"> Mỹ thuật</label><label><input type="checkbox"> Phụ kiện bàn học</label></div>
+    <div class="filter-group"><strong class="field-label">Danh mục</strong><label><input type="checkbox"> Sổ &amp; Giấy</label><label><input type="checkbox"> Bút viết</label><label><input type="checkbox"> Dụng cụ học tập</label><label><input type="checkbox"> Dụng cụ văn phòng</label><label><input type="checkbox"> Mỹ thuật</label><label><input type="checkbox"> Phụ kiện bàn học</label></div>
     <div class="filter-group"><label for="sort-products"><strong>Sắp xếp</strong></label><select class="form-control" id="sort-products"><option>Mặc định</option><option>Giá tăng dần</option><option>Giá giảm dần</option></select></div>
     <button class="button button-primary button-block" type="button" data-demo-message="Đã áp dụng bộ lọc mẫu!">Áp dụng</button>
   </aside>
@@ -313,7 +314,7 @@
 </div>
     <nav class="pagination" aria-label="Phân trang sản phẩm"><a href="products.html" class="is-active" aria-current="page">1</a><a href="products.html">2</a><a href="products.html">3</a><a href="products.html" aria-label="Trang sau">›</a></nav>
   </div>
-</div></section></main>
+</div></div></section></main>
 <footer class="site-footer">
   <div class="container footer-grid">
     <div>
