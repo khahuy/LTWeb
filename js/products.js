@@ -23,27 +23,41 @@
       }
     };
 
-    var syncCategoryFromHash = function () {
-      var hash = window.location.hash;
-      if (!hash) return;
-      if (hash === "#loai-san-pham") {
-        categoryNav.classList.remove("is-hidden");
-        setActiveCategory(categoryTabs[0], false);
-        return;
-      }
-      var match = null;
-      categoryTabs.forEach(function (tab) {
-        var href = tab.getAttribute("href") || "";
-        if (href.slice(href.indexOf("#")) === hash) match = tab;
-      });
-      if (match) {
-        categoryNav.classList.remove("is-hidden");
-        setActiveCategory(match, true);
-      }
-    };
+    if (categorySubtitle) {
+      var syncCategoryFromHash = function () {
+        var hash = window.location.hash;
+        if (!hash) return;
+        if (hash === "#loai-san-pham") {
+          categoryNav.classList.remove("is-hidden");
+          setActiveCategory(categoryTabs[0], false);
+          return;
+        }
+        var match = null;
+        categoryTabs.forEach(function (tab) {
+          var href = tab.getAttribute("href") || "";
+          if (href.slice(href.indexOf("#")) === hash) match = tab;
+        });
+        if (match) {
+          categoryNav.classList.remove("is-hidden");
+          setActiveCategory(match, true);
+        }
+      };
 
-    syncCategoryFromHash();
-    window.addEventListener("hashchange", syncCategoryFromHash);
+      syncCategoryFromHash();
+      window.addEventListener("hashchange", syncCategoryFromHash);
+
+      categoryTabs.forEach(function (tab) {
+        tab.addEventListener("click", function (event) {
+          event.preventDefault();
+          var target = tab.getAttribute("href");
+          if (!target) return;
+          window.location.href = target;
+          window.setTimeout(function () {
+            window.location.reload();
+          }, 0);
+        });
+      });
+    }
   }
 
   document.querySelectorAll("[data-add-cart]").forEach(function (button) {
